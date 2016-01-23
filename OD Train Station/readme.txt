@@ -8,3 +8,4 @@ Using this process here to create the flow lines : http://www.undertheraedar.com
 
 Travel to work mode split - https://www.nomisweb.co.uk/census/2011/qs701ew - Method of travel to work, Table population, All usual residents aged 16 to 74
 
+Output data in GeoJSON: MSOA_Nearest_TrainStation_Polygon.geojson
