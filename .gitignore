@@ -8,6 +8,11 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+# Folders
+*/OD Train Station/OA/
+*/OD Train Station/MSOA/
+*/OD Train Station/LSOA/
+
 # Windows Installer files
 *.cab
 *.msi

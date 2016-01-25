@@ -6,10 +6,10 @@
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="qs701ew20160123143348230" name="qs701ew">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="MSOA_Nearest_TrainStation_Polygon20160123144609019" name="MSOA_Nearest_TrainStation_Polygon">
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="MSOA_Nearest_TrainStation_Polygon20160123144609019" name="MSOA_Nearest_TrainStation_Polygon">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" checked="Qt::Checked" id="MSOA_Nearest_TrainStation_Polygon20160123143742772" name="MSOA_Nearest_TrainStation_Polygon">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="MSOA_Nearest_TrainStation_Polygon20160123143742772" name="MSOA_Nearest_TrainStation_Polygon">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="MSOA_Nearest_TrainStation_LineString20160123141759881" name="MSOA_Nearest_TrainStation_LineString">
@@ -35,10 +35,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-308197.06545386632205918</xmin>
-      <ymin>6908587.16370604559779167</ymin>
-      <xmax>57476.20516635029343888</xmax>
-      <ymax>7097332.75741360709071159</ymax>
+      <xmin>-172685.54437116536428221</xmin>
+      <ymin>7047695.73338229488581419</ymin>
+      <xmax>-149830.96495740188402124</xmax>
+      <ymax>7059492.33298901747912169</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -60,7 +60,9 @@
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:27700" srcDatumTransform="-1" destDatumTransform="-1" layerid="MSOA_Nearest_TrainStation_Polygon20160123143742772"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:3857" srcDatumTransform="-1" destDatumTransform="-1" layerid="OpenLayers_plugin_layer20160123141915038"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:27700" srcDatumTransform="-1" destDatumTransform="-1" layerid="MSOA_Nearest_TrainStation_LineString20160123141759881"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:27700" srcDatumTransform="-1" destDatumTransform="-1" layerid="MSOA_Nearest_TrainStation_Polygon_copy20160123151705708"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:27700" srcDatumTransform="-1" destDatumTransform="-1" layerid="MSOA_Nearest_TrainStation_Polygon20160123142240487"/>
+      <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:27700" srcDatumTransform="-1" destDatumTransform="-1" layerid="MSOA_Nearest_TrainStation_Polygon_SheffieldCityRegion20160123153102336"/>
       <layer_coordinate_transform destAuthId="EPSG:3857" srcAuthId="EPSG:27700" srcDatumTransform="-1" destDatumTransform="-1" layerid="MSOA_Nearest_TrainStation_Polygon20160123144609019"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
@@ -83,14 +85,14 @@
         <legendlayerfile isInOverview="0" layerid="qs701ew20160123143348230" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="MSOA_Nearest_TrainStation_Polygon" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="MSOA_Nearest_TrainStation_Polygon" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="MSOA_Nearest_TrainStation_Polygon20160123144609019" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="MSOA_Nearest_TrainStation_Polygon20160123144609019" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="MSOA_Nearest_TrainStation_Polygon" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="MSOA_Nearest_TrainStation_Polygon" showFeatureCount="0">
       <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="MSOA_Nearest_TrainStation_Polygon20160123143742772" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="MSOA_Nearest_TrainStation_Polygon20160123143742772" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="MSOA_Nearest_TrainStation_LineString" showFeatureCount="0">
@@ -1659,7 +1661,7 @@
         <property key="labeling/distMapUnitMinScale" value="0"/>
         <property key="labeling/drawLabels" value="true"/>
         <property key="labeling/enabled" value="true"/>
-        <property key="labeling/fieldName" value=" concat( MSOA11NM, &quot; &quot;,    &quot;qs701ew_Tr&quot;, &quot; by Train&quot;)"/>
+        <property key="labeling/fieldName" value=" concat( MSOA11NM, ': ',    &quot;qs701ew_Tr&quot;, ' by Train')"/>
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
         <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
@@ -1781,7 +1783,7 @@
       </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
+      <layerTransparency>60</layerTransparency>
       <displayfield>X</displayfield>
       <label>0</label>
       <labelattributes>
@@ -2415,8 +2417,10 @@
         <value>MSOA_Nearest_TrainStation20160123140623417</value>
         <value>MSOA_Nearest_TrainStation_LineString20160123141759881</value>
         <value>MSOA_Nearest_TrainStation_Polygon20160123143742772</value>
+        <value>MSOA_Nearest_TrainStation_Polygon20160123144609019</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
+        <value>enabled</value>
         <value>enabled</value>
         <value>enabled</value>
         <value>enabled</value>
@@ -2431,8 +2435,10 @@
         <value>2</value>
         <value>2</value>
         <value>2</value>
+        <value>2</value>
       </LayerSnappingToleranceUnitList>
       <LayerSnapToList type="QStringList">
+        <value>to_vertex</value>
         <value>to_vertex</value>
         <value>to_vertex</value>
         <value>to_vertex</value>
@@ -2442,6 +2448,7 @@
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
