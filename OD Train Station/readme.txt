@@ -17,6 +17,10 @@ pkgs <- c("stplanr", "rgdal", "leaflet", "geojsonio")
 install.packages(pkgs)
 lapply(pkgs, require, character.only = TRUE)
 
+#Download NaPTAN Data
+    download.file("http://www.dft.gov.uk/NaPTAN/snapshot/NaPTANcsv.zip", ""NaPTAN/NaPTANcsv.zip","auto")
+    unzip("NaPTAN/NaPTANcsv.zip",files="RailReferences.csv", exdir="NaPTAN")
+
 #Download population weighted centroids (assumes OA,MSOA and LSOA directories exist)
 # Potential bug found in download.file if a 302 response is received (example http://www.ons.gov.uk/ons/external-links/social-media/g-m/2011-oa-population-weighted-centroids.html vs https://geoportal.statistics.gov.uk/Docs/Boundaries/Output_areas_(E+W)_2011_Population_Weighted_Centroids_V2.zip)
 
@@ -101,7 +105,7 @@ travel_network <- od2line_custom(flow = flows, zones = MSOA, zonesto = NaPTAN_Ra
     points(NaPTAN_Rail,col='red')
     points(MSOA,col='green
 
-sum(travel_network@data[,3])/1000 #km length (approx)
+sum(travel_network@data[,3])/1000 #km length (approx) - Used to check CycleStreets API limit!
 
 #Generate route network
     travel_network = travel_network[travel_network$NaPTAN_AtcoCD =='9100SHEFFLD', ] #Filter on Sheffield Station Only
@@ -110,7 +114,7 @@ sum(travel_network@data[,3])/1000 #km length (approx)
     cyclestreet_pat() #enter cyclestreets api key
     routes <- line2route(travel_network)
 
-geojson_write(routes, file= "OA_Sheffield.geojson")
+geojson_write(routes, file= "OA_Sheffield_Routes.geojson")
 geojson_write(travel_network, file= "OA_Sheffield_Network.geojson")
 
 #This didn't seem to work as expected
@@ -123,11 +127,4 @@ geojson_write(travel_network, file= "OA_Sheffield_Network.geojson")
 
     geojson_write(rnet, file= "OA_Sheffield_rnet.geojson")
 
-
-
-map <- readOGR("MSOA_Nearest_TrainStation_Polygon_SheffieldCityRegion.geojson", "OGRGeoJSON")
-map <- spTransform(map, CRS("+init=epsg:4326"))
-cyclestreet_pat()
-routes <- line2route(map)
-leaflet() %>% addTiles() %>% addPolylines(data = routes)
-geojson_write(routes, file= "MSOA_Nearest_TrainStation_Routes_SheffieldCityRegion.geojson")
+#All done
