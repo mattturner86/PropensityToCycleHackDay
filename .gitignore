@@ -9,10 +9,7 @@ Desktop.ini
 $RECYCLE.BIN/
 
 # Folders
-*/OD Train Station/OA/
-*/OD Train Station/MSOA/
-*/OD Train Station/LSOA/
-*/OD Train Station/NaPTAN/
+#none
 
 # Windows Installer files
 *.cab
